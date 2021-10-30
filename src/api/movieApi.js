@@ -1,6 +1,5 @@
 import RequestService from 'services/RequestService';
 import config from 'config';
-console.log(config)
 
 const requestService = new RequestService(config.api.baseUrl);
 
