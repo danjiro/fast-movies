@@ -21,12 +21,12 @@ function App() {
       if (title.length > 3) {
         setIsSearching(true);
 
-        const { data } = await searchMovieTitle(title);
+        const results = await searchMovieTitle(title);
 
         setIsSearching(false);
 
-        if (data.Search?.length) {
-          setSearchResults(data.Search);
+        if (results.Search?.length) {
+          setSearchResults(results.Search);
         } else {
           setSearchResults([]);
         }
